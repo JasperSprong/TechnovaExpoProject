@@ -1,0 +1,140 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #5f7a61;
+    font-family: 'Roboto', sans-serif;
+    padding: 40px;
+    color: #fff;
+}
+
+/* Main layout with cards + music player side by side */
+.main-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: start;
+}
+
+/* Cards container */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Shared card + music-player styles */
+.card, .music-player {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover, .music-player:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Card specific styles */
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.card h3, .card h2 {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #d5eebb;
+}
+
+/* Music player positioned on the right */
+.music-player {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 40px;
+    color: #d5eebb;
+}
+
+/* Music player text */
+.music-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.artist-name {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Spinning disk */
+.disk {
+    margin: 30px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-image: url('photos/cover__art_nervo.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+    animation: rotate 5s linear infinite;
+    position: relative;
+}
+
+.disk::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: #5f7a61;
+    border-radius: 50%;
+}
+
+/* Spinning animation */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .music-player {
+        position: relative;
+        top: auto;
+        margin-top: 40px;
+    }
+}
+
+
+.section-breaker {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    color: #d5eebb;
+    margin: 60px auto 40px auto;
+    max-width: 800px;
+    line-height: 1.4;
+}

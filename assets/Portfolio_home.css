@@ -1,0 +1,53 @@
+/* Algemene reset en lettertype */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #1f2937;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: 300;
+    color: #d1d5db;
+}
+
+/* Afbeeldingen */
+.portfolio-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 1rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Secties */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.intro p, .about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}

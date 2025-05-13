@@ -1,0 +1,136 @@
+/* Base Reset & Body Styling */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.main_logo_wrapper {
+  flex-shrink: 0;
+}
+
+.main_logo {
+  max-width: 150px;
+  height: auto;
+  border-radius: 20%;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.hero-text-wrapper {
+  max-width: 700px;
+  text-align: center;
+}
+
+.hero-header {
+  color: #d1c7c7;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+  color: #f3e7e7;
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.hero-text-wrapper ol {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-left: 20px;
+}
+
+/* Button Section */
+.button-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.button {
+  --main-color: rgb(46, 213, 115);
+  --main-bg-color: rgba(46, 213, 116, 0.36);
+  --pattern-color: rgba(46, 213, 116, 0.073);
+
+  filter: hue-rotate(0deg);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background: radial-gradient(circle, var(--main-bg-color) 0%, rgba(0, 0, 0, 0) 95%),
+              linear-gradient(var(--pattern-color) 1px, transparent 1px),
+              linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+  background-size: cover, 15px 15px, 15px 15px;
+  background-position: center;
+  border-image: radial-gradient(circle, var(--main-color) 0%, rgba(0, 0, 0, 0) 100%) 1;
+  border-width: 1px 0;
+  border-style: solid;
+  color: var(--main-color);
+  padding: 1rem 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: background-size 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-size: cover, 10px 10px, 10px 10px;
+}
+
+.button:active {
+  filter: hue-rotate(200deg);
+}
+
+/* Social Icons */
+.socails_wraper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.linkedIn svg {
+  color: #0e76a8;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.linkedIn svg:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+.fotter-wrapper {
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid #333;
+}
+
+.fotter-logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.fotter-text {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-wrapper {
+      flex-direction: column;
+      padding: 20px;
+  }
+}

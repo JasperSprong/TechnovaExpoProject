@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreeJs.app</title>
+  <link rel="stylesheet" href="assets/maincss.css">
+  <style>
+    canvas {
+      position: absolute;
+      z-index: 0; /* stays behind */
+    }
+    #myIframe {
+      z-index: 10;
+    }
+  </style>
+
+  <!-- Import map: must be BEFORE module script -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Canvas for scene -->
+  <canvas id="background"></canvas>
+
+  <!-- Your main JavaScript -->
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>
